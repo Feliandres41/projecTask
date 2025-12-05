@@ -7,12 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Project extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'name',
-        'description',
-        'is_archived',
+        'name', 'description', 'is_archived'
     ];
 
     public function tasks()
@@ -20,3 +16,4 @@ class Project extends Model
         return $this->hasMany(Task::class);
     }
 }
+
